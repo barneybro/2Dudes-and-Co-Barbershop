@@ -17,7 +17,7 @@ header {
     position: relative;
     width: 100%;
     height: 100vh; 
-    background: url('check2.jpg') no-repeat;
+    background: url('Header2.jpg') no-repeat;
     background-size: cover;
     display: flex;
     justify-content: space-between;
@@ -29,6 +29,43 @@ header {
     width: 100px;
     height: auto;
 }
+
+
+
+
+
+
+/* Apply Playfair Display to headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* Makes the font bold */
+}
+
+/* You can also use it for paragraphs or specific sections */
+p {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400; /* Regular weight for body text */
+}
+
+/* Apply it to the navigation headers */
+.navigation a {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+
+/* Example for a tagline */
+.tagline h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #f1f1f1;
+}
+
+
+
+
+
 /* Hamburger menu - visible on scroll, stays fixed at top */
 .hamburger {
     display: none;
@@ -38,12 +75,27 @@ header {
 }
 
 .hamburger span {
-    width: 30px;
-    height: 3px;
+    width: 40px;
+    height: 4px;
     background-color: white;
-    margin: 5px 0;
+    margin: 8px 0;
     transition: 0.4s;
 }
+
+.scrolled .hamburger {
+    display: flex;
+    position: fixed;
+    top: 250px; /* Lower the hamburger menu by adjusting this value */
+    right: 10%;
+    z-index: 101;
+}
+
+
+
+
+
+
+
 
 /* Navigation styles */
 .navigation {
@@ -53,13 +105,13 @@ header {
 }
 
 .navigation a {
-    font-size: 18px;
+    font-size: 24px; /* Increased font size for navigation headers */
     color: #f1f1f1;
     font-weight: bold;
     text-decoration: none;
     margin-left: 35px;
-    transition: border-bottom 0.3s ease; /* Smooth transition for the underline */
-    padding-bottom: 5px; /* Add space for the underline effect */
+    transition: border-bottom 0.3s ease;
+    padding-bottom: 5px;
 }
 
 /* Add underline on hover */
@@ -100,12 +152,18 @@ header {
 }
 
 
+
+
+
+
+
+
 /* Off-canvas (side) navigation */
 .side-navigation {
     position: fixed;
     top: 0;
-    right: -250px; /* Start off-screen */
-    width: 250px;
+    right: -400px; /* Increase the width of the side nav by starting it off screen */
+    width: 400px; /* Increased width of side navigation */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
@@ -114,20 +172,22 @@ header {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    overflow-y: auto; /* Scroll if content overflows */
+    overflow-y: auto;
 }
 
+/* Increase the font size of side navigation links */
 .side-navigation a {
-    font-size: 18px;
+    font-size: 35px; /* Increased font size of the links */
     color: #f1f1f1;
     text-decoration: none;
-    margin: 15px 0;
+    margin: 20px 0; /* Adjusted margin for spacing between sections */
     transition: color 0.3s ease;
 }
 
 .side-navigation a:hover {
     color: #dfb86a; /* Change to gold on hover */
 }
+
 
 .side-navigation.show {
     right: 0; /* Slide in from the right */
@@ -136,7 +196,7 @@ header {
 /* Close button inside the side nav */
 .close-btn {
     align-self: flex-end;
-    font-size: 24px;
+    font-size: 50px; /* Increased the size of the close button */
     color: white;
     cursor: pointer;
     margin-bottom: 20px;
@@ -154,7 +214,7 @@ header {
 }
 
 .tagline h1 {
-    font-size: 50px;
+    font-size: 100px;
     color: #f1f1f1;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -191,6 +251,11 @@ header {
     color: #f1f1f1;
     font-weight: bold;
 }
+
+
+
+
+
 
 .footer {
     background-color: #081b29;
@@ -248,6 +313,31 @@ header {
     color: black; /* Change icon color on hover */
 }
 
+.footer-content {
+    text-align: center; /* Center all footer content */
+}
+
+.appointment-btn-footer {
+    display: inline-block;
+    margin-top: 50px; /* Space between socials and button */
+    padding: 10px 20px;
+    background-color: #ff5e57; /* Your preferred button color */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-btn-footer a {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+}
+
+.appointment-btn-footer:hover {
+    background-color: #ff3b30; /* Darker shade on hover */
+}
+
 
 /*About section*/
 
@@ -277,14 +367,14 @@ header {
 }
 
 .about-text h2 {
-    font-size: 28px;
+    font-size: 40px;
     margin-bottom: 15px;
     color: #dfb86a;
     text-align: center;
 }
 
 .about-text p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
 }
 
@@ -331,13 +421,13 @@ header {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 15px;
     color: #dfb86a;
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     color: #cfcfcf;
 }
 
@@ -401,20 +491,20 @@ p {
 }
 
 .location-box h2 {
-    font-size: 28px;
+    font-size: 35px;
     color: #dfb86a; /* Gold color for titles */
     text-align: center;
     margin-bottom: 20px;
 }
 .location-box h3 {
-    font-size: 28px;
+    font-size: 32px;
 
     text-align: center;
     margin-bottom: 20px;
 }
 
 .location-box p {
-    font-size: 16px;
+    font-size: 25px;
     line-height: 1.6;
     text-align: center;
     margin-bottom: 20px;
