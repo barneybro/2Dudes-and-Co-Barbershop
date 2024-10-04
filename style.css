@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Playfair Display', serif; 
     cursor: default;
 }
 
@@ -30,48 +31,16 @@ header {
     height: auto;
 }
 
-
-
-
-
-
-/* Apply Playfair Display to headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700; /* Makes the font bold */
-}
-
-/* You can also use it for paragraphs or specific sections */
-p {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400; /* Regular weight for body text */
-}
-
-/* Apply it to the navigation headers */
-.navigation a {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-}
-
-
-/* Example for a tagline */
-.tagline h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    font-weight: 700;
-    color: #f1f1f1;
-}
-
-
-
-
-
-/* Hamburger menu - visible on scroll, stays fixed at top */
+/* Hamburger menu: always visible */
 .hamburger {
-    display: none;
+    display: flex; /* Displayed by default */
     flex-direction: column;
     cursor: pointer;
     z-index: 101;
+    position: absolute; /* Positioned within the header */
+    top: 70px; 
+    right: 10%;
+    transition: top 0.4s ease; /* Smooth transition */
 }
 
 .hamburger span {
@@ -82,20 +51,13 @@ p {
     transition: 0.4s;
 }
 
+/* Adjust position when scrolling starts */
 .scrolled .hamburger {
-    display: flex;
-    position: fixed;
-    top: 250px; /* Lower the hamburger menu by adjusting this value */
+    position: fixed; /* Fix the position when scrolling */
+    top: 20px; /* Adjust this for a smooth transition */
     right: 10%;
     z-index: 101;
 }
-
-
-
-
-
-
-
 
 /* Navigation styles */
 .navigation {
@@ -105,7 +67,7 @@ p {
 }
 
 .navigation a {
-    font-size: 24px; /* Increased font size for navigation headers */
+    font-size: 24px; 
     color: #f1f1f1;
     font-weight: bold;
     text-decoration: none;
@@ -114,24 +76,15 @@ p {
     padding-bottom: 5px;
 }
 
-/* Add underline on hover */
 .navigation a:hover,
 .navigation a:active {
-    border-bottom: 2px solid white; /* White underline */
-    color: #f1f1f1; /* Keep text color consistent */
+    border-bottom: 2px solid white; 
+    color: #f1f1f1;
 }
 
-/* On scroll: hide the navigation and display the hamburger */
+/* Hide the navigation on scroll */
 .scrolled .navigation {
-    display: none; /* Hide the normal navigation when scrolled */
-}
-
-.scrolled .hamburger {
-    display: flex; /* Show hamburger when scrolling down */
-    position: fixed;
-    top: 20px;
-    right: 10%; /* Keep the hamburger in the top-right corner */
-    z-index: 101; /* Ensure it stays above other content */
+    display: none; /* Hide normal navigation when scrolled */
 }
 
 /* Show the navigation when the hamburger is clicked */
@@ -143,7 +96,7 @@ p {
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
     padding: 20px;
-    flex-direction: column; /* Stack the nav items */
+    flex-direction: column; 
     width: 200px;
 }
 
@@ -467,56 +420,55 @@ p {
 
 /*Location section*/
 
-
+/* Location section */
 .location-section {
     padding: 60px 10%;
-    background-color: black; /* Ensure consistent background color */
+    background-color: black;
 }
 
 .location-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 40px; /* Space between the two boxes */
-    margin: 0 auto 100px auto; /* Added bottom margin of 100px to create space below the last row */
-
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 40px; /* Space between sections */
+    justify-items: center; /* Center content horizontally */
+    margin: 0 auto 100px auto; /* Space below the last section */
 }
 
-
-
+/* Style for the location box */
 .location-box {
-    background-color: black; /* Brownish box background */
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
-    color: #f1f1f1; /* Light text for contrast */
+    color: #f1f1f1;
+    text-align: center;
 }
 
-.location-box h2 {
-    font-size: 35px;
-    color: #dfb86a; /* Gold color for titles */
-    text-align: center;
-    margin-bottom: 20px;
-}
-.location-box h3 {
+.location-box h2, .location-box h3 {
     font-size: 32px;
-
-    text-align: center;
-    margin-bottom: 20px;
+    color: #dfb86a;
 }
 
 .location-box p {
     font-size: 25px;
     line-height: 1.6;
-    text-align: center;
-    margin-bottom: 20px;
-
 }
 
+/* Style for the map */
 .map-placeholder {
+    width: 100%;
+    max-width: 800px; /* Max width for the iframe */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Placeholder height until the map is embedded */
-    background-color: black; /* Slightly darker box for the map */
+    height: 450px; /* Adjust to match iframe height */
+    background-color: black;
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px; /* Add a slight border radius */
 }
 
 
