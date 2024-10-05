@@ -1,23 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery Page</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
     </head>
     <body>
         <header class="header">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="placeholder.jpg" alt="2DudesAndCo Logo">
             </a>
-            <nav class="navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="ourBarbers.html">Our Barbers</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="location.html">Location</a>
-
-                <a href="#" class="appointment-btn">Appointment</a> 
-            </nav>
+        
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
+        
+        <!-- Side Navigation (Off-Canvas Menu) -->
+        <div class="side-navigation" id="side-navigation">
+            <div class="close-btn" id="close-btn">&times;</div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ourBarbers.html">Our Barbers</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="location.html">Location</a>
+            <a href="#" class="appointment-btn">Appointment</a>
+        </div>
 
         <div class="tagline">
             <h1>Where Every Cut Becomes a Masterpiece</h1>
@@ -43,24 +56,6 @@
                 <div class="gallery-item">
                     <img src="imagesPH.jpg" alt="Gallery Image 6">
                 </div>
-                <div class="gallery-item">
-                    <img src="imagesPH.jpg" alt="Gallery Image 7">
-                </div>
-                <div class="gallery-item">
-                    <img src="imagesPH.jpg" alt="Gallery Image 8">
-                </div>
-                <div class="gallery-item">
-                    <img src="imagesPH.jpg" alt="Gallery Image 9">
-                </div>
-                <div class="gallery-item">
-                    <img src="imagesPH.jpg" alt="Gallery Image 10">
-                </div>
-                <div class="gallery-item">
-                    <img src="imagesPH.jpg" alt="Gallery Image 11">
-                </div>
-                <div class="gallery-item">
-                    <img src="imagesPH.jpg" alt="Gallery Image 12">
-                </div>
             </div>
         </section>
 
@@ -76,6 +71,8 @@
                     <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
                 </div>
             </div>
+            <a href="#" class="appointment-btn-footer">Book an Appointment</a>
+
 
         </footer>
         <div class="footer-bottom">
@@ -85,5 +82,40 @@
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+        <script>
+            // Handle scrolling event to toggle 'scrolled' class
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('.header');
+                
+                // Add 'scrolled' class to header when scrolling down beyond 50px
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled'); // Remove 'scrolled' class when scrolled back to the top
+                }
+            });
+        
+            // Select elements
+            const hamburger = document.getElementById('hamburger');
+            const sideNavigation = document.getElementById('side-navigation');
+            const closeBtn = document.getElementById('close-btn');
+        
+            // Toggle the side navigation when hamburger is clicked
+            hamburger.addEventListener('click', function() {
+                sideNavigation.classList.toggle('show');
+            });
+        
+            // Close the side navigation when the close button is clicked
+            closeBtn.addEventListener('click', function() {
+                sideNavigation.classList.remove('show');
+            });
+        
+            // Optionally, close the side navigation when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (!sideNavigation.contains(event.target) && !hamburger.contains(event.target)) {
+                    sideNavigation.classList.remove('show');
+                }
+            });
+        </script>
     </body>
 </html>
