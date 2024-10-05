@@ -180,7 +180,7 @@ header {
 }
 
 .services h2 {
-    font-size: 20px;
+    font-size: 25px;
     color: #f1f1f1;
     font-weight: bold;
     margin-bottom: 30px;
@@ -193,7 +193,7 @@ header {
 }
 
 .service-item h3 {
-    font-size: 12px;
+    font-size: 18px;
     color: #f1f1f1;
     font-weight: bold;
     margin-bottom: 5px;
@@ -257,7 +257,7 @@ header {
 }
 .footer-socials ion-icon {
     font-size: 40px; /* Adjust size as needed */
-    margin: 0 50px;  /* Add spacing between icons */
+    margin: 0 30px;  /* Add spacing between icons */
     color: #f1f1f1;  /* Color for the icons */
     transition: color 0.3s ease;
 }
@@ -290,6 +290,12 @@ header {
 .appointment-btn-footer:hover {
     background-color: #ff3b30; /* Darker shade on hover */
 }
+
+
+
+
+
+
 
 
 
