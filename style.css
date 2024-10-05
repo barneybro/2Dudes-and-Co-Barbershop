@@ -299,18 +299,18 @@ header {
 
 
 
-/*About section*/
-
-
+/* About section */
 .about-section {
     padding: 60px 10%;
     background-color: black; /* Dark background for contrast */
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px; /* Space between the columns */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 40px; /* Space between the text and image */
+    align-items: center; /* Center the content */
+    text-align: center; /* Center text for both image and text */
 }
 
 .about-item {
@@ -318,6 +318,7 @@ header {
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
+    max-width: 800px; /* Limit the width of the text and image */
 }
 
 .about-img img {
@@ -330,7 +331,6 @@ header {
     font-size: 25px;
     margin-bottom: 15px;
     color: #dfb86a;
-    text-align: center;
 }
 
 .about-text p {
@@ -344,10 +344,7 @@ header {
 
 
 
-
-
 /*Barbers section*/
-
 
 
 
@@ -356,18 +353,20 @@ header {
 .barber-section {
     padding: 40px 10%;
     background-color: black;
+    text-align: center;
 }
 
 .row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center the items horizontally */
+    gap: 20px; /* Space between text and image */
+    margin-bottom: 50px; /* Space between rows */
 }
 
 .barber-box {
-    flex-basis: 48%; /* Each box takes up 48% of the row width */
-    text-align: center;
-    background-color: black; /* Same brown color */
+    max-width: 80%; /* Limit the width of the content */
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
@@ -390,7 +389,13 @@ p {
     font-size: 13px;
     color: #cfcfcf;
 }
-
+.divider {
+    width: 80%; /* Adjusts the width of the line */
+    margin: 40px auto; /* Adds space above and below the line */
+    border: none; /* Removes default styling */
+    border-top: 1px solid #dfb86a; /* Adds a subtle line with your accent color */
+    opacity: 0.5; /* Lowers opacity for a more subtle effect */
+}
 
 
 
