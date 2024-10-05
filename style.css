@@ -410,17 +410,16 @@ p {
     flex-direction: column; /* Stack images vertically */
     align-items: center; /* Center the images horizontally */
     gap: 50px; /* Space between images */
-    max-width: 60%; /* Restrict the overall width */
+    max-width: 80%; /* Restrict the overall width */
     margin: 0 auto;
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 20px 0; /* Add top and bottom padding */
 }
 
 .gallery-item {
-    background-color: black; /* Darker brownish background for the images */
+    
     padding: 20px;
     border-radius: 20px;
-    border: 5px solid rgb(83, 72, 72); /* Golden border to complement the rest of the page */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
     width: 100%; /* Ensure the item takes up full width */
 }
