@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     font-family: "Garamond", serif;
@@ -18,7 +18,7 @@ header {
     position: relative;
     width: 100%;
     height: 100vh; 
-    background: #e7e1e1;
+    background: linear-gradient(180deg, #f1f1f1 0%, #333333 100%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
@@ -368,7 +368,7 @@ header {
 /* About section */
 .about-section {
     padding: 60px 10%;
-    background-color: black; /* Dark background for contrast */
+    background-color: #081b29; /* Dark navy for contrast */
 }
 
 .about-grid {
@@ -380,7 +380,7 @@ header {
 }
 
 .about-item {
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
@@ -418,7 +418,7 @@ header {
 
 .barber-section {
     padding: 40px 10%;
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
     text-align: center;
 }
 
@@ -432,7 +432,7 @@ header {
 
 .barber-box {
     max-width: 80%; /* Limit the width of the content */
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
@@ -468,11 +468,10 @@ p {
 
 
 
-
 /* Gallery Section */
 .gallery-section {
     padding: 30px 10%;
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
     text-align: center;
 }
 
@@ -485,12 +484,13 @@ p {
     margin: 0 auto;
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 20px 0; /* Add top and bottom padding */
+    background-color: transparent; /* Remove black background */
 }
 
 .gallery-item {
-    
     padding: 20px;
     border-radius: 20px;
+    background-color: #081b29; /* Dark navy for contrast */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
     width: 100%; /* Ensure the item takes up full width */
 }
@@ -500,14 +500,17 @@ p {
     height: auto;
     border-radius: 10px; /* Round the corners of the images */
     object-fit: cover;
+    background-color: #081b29; /* Dark navy for contrast */
+
 }
+
 
 /*Location section*/
 
 /* Location section */
 .location-section {
     padding: 60px 10%;
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
 }
 
 .location-grid {
@@ -520,7 +523,7 @@ p {
 
 /* Style for the location box */
 .location-box {
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
@@ -545,7 +548,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 450px; /* Adjust to match iframe height */
-    background-color: black;
+    background-color: #081b29; /* Dark navy for contrast */
 }
 
 .map-placeholder iframe {
