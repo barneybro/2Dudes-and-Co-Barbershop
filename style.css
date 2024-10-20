@@ -18,8 +18,19 @@ header {
     position: relative;
     width: 100%;
     height: 100vh; 
-    background: linear-gradient(180deg, #f1f1f1 0%, #333333 100%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    background-blend-mode: overlay;
+    background-color: rgba(8, 27, 41, 0.5); /* Dark navy transparent overlay */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 10%;
+}
+.indexHeader {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background: url('5.jpg') no-repeat center center;
+    background-size: cover; 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -37,16 +48,16 @@ header {
     width: 100px;
     height: 100px;
     border-radius: 50%; /* Makes the image a circle */
-    background-color: transparent; /* Ensure background is transparent */
+    background-color: white; /* Set the background to white */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Initial shadow */
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform */
-    mix-blend-mode: multiply; /* Blend white parts with the background */
 }
 
 .logo img:hover {
     box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
     transform: scale(1.05); /* Slightly enlarge the logo on hover */
 }
+
 
 
 
@@ -209,15 +220,14 @@ header {
 
 .tagline h1 {
     font-size: 45px; /* Large font size for emphasis */
-    color: #333; /* Darker initial color to contrast with the light background */
+    color: #dfb86a; /* Darker initial color to contrast with the light background */
     font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3); /* Soft shadow for depth */
     transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions for hover */
 }
 
 .tagline:hover h1 {
     color: #dfb86a; /* Gold on hover for a sleek look */
-    text-shadow: 3px 3px 15px rgba(223, 184, 106, 0.9), 5px 5px 20px rgba(0, 0, 0, 0.3); /* Glow effect on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
 }
 
@@ -234,7 +244,7 @@ header {
 /* Services Section */
 .services {
     padding: 40px 10%;
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
     text-align: center;
 }
 
@@ -362,13 +372,10 @@ header {
 
 
 
-
-
-
 /* About section */
 .about-section {
     padding: 60px 10%;
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
 }
 
 .about-grid {
@@ -380,7 +387,7 @@ header {
 }
 
 .about-item {
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
@@ -388,8 +395,9 @@ header {
 }
 
 .about-img img {
-    width: 100%;
-    height: auto;
+    width: 750px; /* Make the image take full width of its container */
+    height: 750px; /* Set a specific height */
+    object-fit: cover; /* Maintain aspect ratio and cover the assigned area */
     border-radius: 10px;
 }
 
@@ -410,6 +418,7 @@ header {
 
 
 
+
 /*Barbers section*/
 
 
@@ -418,7 +427,7 @@ header {
 
 .barber-section {
     padding: 40px 10%;
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
     text-align: center;
 }
 
@@ -432,15 +441,15 @@ header {
 
 .barber-box {
     max-width: 80%; /* Limit the width of the content */
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
 }
 
 .barber-image {
-    width: 100%;
-    height: auto;
+    width: 800px;
+    height: 800px;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -465,13 +474,18 @@ p {
 
 
 
-
+/* Separator line */
+.separator {
+    height: 6px; /* Adjust the height as needed */
+    background-color: #dfb86a; /* Gold color */
+    margin: 0; /* Remove margin to align perfectly */
+}
 
 
 /* Gallery Section */
 .gallery-section {
     padding: 30px 10%;
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: #081b29; /* Set black background for the whole section */
     text-align: center;
 }
 
@@ -484,14 +498,13 @@ p {
     margin: 0 auto;
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 20px 0; /* Add top and bottom padding */
-    background-color: transparent; /* Remove black background */
+    background-color: #081b29; /* Ensure this is the same color as the section */
 }
 
 .gallery-item {
     padding: 20px;
     border-radius: 20px;
-    background-color: #081b29; /* Dark navy for contrast */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    background-color: #081b29; /* Keep the background consistent with section */
     width: 100%; /* Ensure the item takes up full width */
 }
 
@@ -500,17 +513,14 @@ p {
     height: auto;
     border-radius: 10px; /* Round the corners of the images */
     object-fit: cover;
-    background-color: #081b29; /* Dark navy for contrast */
-
+    background-color: #081b29; /* Ensures any gaps are black */
 }
 
-
-/*Location section*/
 
 /* Location section */
 .location-section {
     padding: 60px 10%;
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
 }
 
 .location-grid {
@@ -519,11 +529,12 @@ p {
     gap: 40px; /* Space between sections */
     justify-items: center; /* Center content horizontally */
     margin: 0 auto 100px auto; /* Space below the last section */
+    background-color: black; /* Dark navy for contrast */
 }
 
 /* Style for the location box */
 .location-box {
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
@@ -548,7 +559,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 450px; /* Adjust to match iframe height */
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: black; /* Dark navy for contrast */
 }
 
 .map-placeholder iframe {
@@ -556,6 +567,7 @@ p {
     height: 100%;
     border: none;
     border-radius: 10px; /* Add a slight border radius */
+    background-color: black; /* Dark navy for contrast */
 }
 
 
