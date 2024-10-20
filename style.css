@@ -395,11 +395,14 @@ header {
 }
 
 .about-img img {
-    width: 750px; /* Make the image take full width of its container */
-    height: 750px; /* Set a specific height */
-    object-fit: cover; /* Maintain aspect ratio and cover the assigned area */
+    max-width: 100%; /* Ensure the image scales down */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    /* You can add a fixed height if you want all images to have the same size */
+    max-height: 400px; /* Adjust this value as needed */
 }
+
 
 .about-text h2 {
     font-size: 25px;
@@ -420,8 +423,6 @@ header {
 
 
 /*Barbers section*/
-
-
 
 
 
@@ -448,10 +449,12 @@ header {
 }
 
 .barber-image {
-    width: 800px;
-    height: 800px;
+    max-width: 100%; /* Ensure the image scales down */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    /* You can add a fixed height if you want all images to have the same size */
+    max-height: 300px; /* Adjust this value as needed */
 }
 
 h2 {
