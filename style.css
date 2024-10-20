@@ -166,17 +166,21 @@ header {
 .side-navigation {
     position: fixed;
     top: 0;
-    right: -400px; /* Increase the width of the side nav by starting it off screen */
-    width: 400px; /* Increased width of side navigation */
-    height: 100%;
+    right: -100%; /* Initially off-screen */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.9);
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
-    transition: right 0.4s ease;
+    transition: right 0.4s ease; /* Transition for slide-in effect */
     z-index: 200;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    overflow-y: auto;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Show the side navigation */
+.side-navigation.show {
+    right: 0; /* Slide in from the right */
 }
 
 /* Increase the font size of side navigation links */
@@ -188,6 +192,23 @@ header {
     transition: color 0.3s ease;
 }
 
+/* Centered styling for the close button */
+/* Close button inside the side nav */
+.close-btn {
+    align-self: center; /* Center align the close button */
+    font-size: 50px; /* Increased the size of the close button */
+    color: white;
+    cursor: pointer;
+    margin: 20px 0; /* Add spacing above and below */
+    transition: color 0.3s ease; /* Optional: Add transition for hover effect */
+}
+
+.close-btn:hover {
+    color: #dfb86a; /* Change color on hover for a visual effect */
+}
+
+
+
 .side-navigation a:hover {
     color: #dfb86a; /* Change to gold on hover */
 }
@@ -197,14 +218,20 @@ header {
     right: 0; /* Slide in from the right */
 }
 
-/* Close button inside the side nav */
-.close-btn {
-    align-self: flex-end;
-    font-size: 50px; /* Increased the size of the close button */
-    color: white;
-    cursor: pointer;
-    margin-bottom: 20px;
+.side-logo {
+    width: 80px; /* Set a small width */
+    height: 80px; /* Set a small height */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin: 10px auto; /* Center the logo and add some spacing */
+    display: block; /* Center the image as a block element */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow for effect */
 }
+
+
+
+/* Close button inside the side nav */
+
 
 
 

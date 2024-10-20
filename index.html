@@ -23,13 +23,15 @@
         
         <!-- Side Navigation (Off-Canvas Menu) -->
         <div class="side-navigation" id="side-navigation">
-            <div class="close-btn" id="close-btn">&times;</div>
+            <img src="logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="ourBarbers.html">Our Barbers</a>
             <a href="gallery.html">Gallery</a>
             <a href="location.html">Location</a>
             <a href="#" class="appointment-btn">Appointment</a>
+            <div class="close-btn" id="close-btn">&times;</div>
+
         </div>
         
 
@@ -119,7 +121,7 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
         <script>
-            // Handle scrolling event to toggle 'scrolled' class
+                    // Handle scrolling event to toggle 'scrolled' class
             window.addEventListener('scroll', function() {
                 const header = document.querySelector('.indexHeader');
                 
@@ -130,28 +132,29 @@
                     header.classList.remove('scrolled'); // Remove 'scrolled' class when scrolled back to the top
                 }
             });
-        
+
             // Select elements
             const hamburger = document.getElementById('hamburger');
             const sideNavigation = document.getElementById('side-navigation');
             const closeBtn = document.getElementById('close-btn');
-        
+
             // Toggle the side navigation when hamburger is clicked
             hamburger.addEventListener('click', function() {
-                sideNavigation.classList.toggle('show');
+                sideNavigation.classList.toggle('show'); // Show or hide the side navigation
             });
-        
+
             // Close the side navigation when the close button is clicked
             closeBtn.addEventListener('click', function() {
-                sideNavigation.classList.remove('show');
+                sideNavigation.classList.remove('show'); // Hide the side navigation
             });
-        
+
             // Optionally, close the side navigation when clicking outside of it
             window.addEventListener('click', function(event) {
                 if (!sideNavigation.contains(event.target) && !hamburger.contains(event.target)) {
-                    sideNavigation.classList.remove('show');
+                    sideNavigation.classList.remove('show'); // Hide when clicking outside
                 }
             });
+
         </script>
         
         
