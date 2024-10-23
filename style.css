@@ -243,20 +243,20 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover animation */
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .tagline h1 {
-    font-size: 45px; /* Large font size for emphasis */
-    color: #dfb86a; /* Darker initial color to contrast with the light background */
+    font-size: 45px; 
+    color: #dfb86a; 
     font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3); /* Soft shadow for depth */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions for hover */
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3); 
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .tagline:hover h1 {
-    color: #dfb86a; /* Gold on hover for a sleek look */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    color: #dfb86a; 
+    transform: scale(1.05); 
 }
 
 
@@ -272,13 +272,13 @@ header {
 /* Services Section */
 .services {
     padding: 40px 10%;
-    background-color: black; /* Dark navy for contrast */
+    background-color: black; 
     text-align: center;
 }
 
 .services h2 {
     font-size: 25px;
-    color: #f1f1f1; /* Keeping it white for contrast against dark background */
+    color: #f1f1f1; 
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -286,28 +286,31 @@ header {
 .service-item {
     margin: 15px 0;
     padding: 20px;
-    background-color: #34495e; /* Slate gray for service items */
-    border-radius: 5px; /* Smooth edges */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
-    transition: transform 0.2s ease, background-color 0.3s ease; /* Added background transition */
+    /* background-color: rgb(116, 84, 3);  */
+    background-color: #bb9447;
+    border-radius: 5px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s ease, background-color 0.3s ease; 
 }
 
 .service-item:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
-    background-color: #3d5a73; /* Lighter slate gray on hover */
+    transform: scale(1.02); 
+    background-color: #dfb86a; 
 }
 
 .service-item h3 {
     font-size: 18px;
-    color: #f1f1f1; /* Gold accent for service headings */
+    color: #f1f1f1;
     font-weight: bold;
     margin-bottom: 5px;
+    /* text-shadow: 12px 12px 18px rgba(0, 0, 0, 0.3); Soft shadow for depth */
+
 }
 
 .service-item p {
     font-size: 13px;
-    color: #f1f1f1; /* White for description text */
-    font-weight: normal; /* Less emphasis */
+    color: #f1f1f1; 
+    font-weight: normal; 
 }
 
 
@@ -450,12 +453,25 @@ header {
     color: #dfb86a;
 }
 
+/* Current styling for all screens */
 .about-text p {
     font-size: 13px;
     line-height: 1.6;
 }
 
+/* Larger text for tablets and up */
+@media (min-width: 768px) { /* Tablet and larger */
+    .about-text p {
+        font-size: 16px;
+    }
+}
 
+/* Even larger text for laptops and desktops */
+@media (min-width: 1024px) { /* Laptop and larger */
+    .about-text p {
+        font-size: 18px;
+    }
+}
 
 
 
@@ -507,6 +523,24 @@ header {
     }
 }
 
+.barber-box p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Larger text for tablets and up */
+@media (min-width: 768px) { /* Tablet and larger */
+    .barber-box p {
+        font-size: 16px;
+    }
+}
+
+/* Even larger text for laptops and desktops */
+@media (min-width: 1024px) { /* Laptop and larger */
+    .barber-box p {
+        font-size: 18px;
+    }
+}
 
 
 h2 {
@@ -531,10 +565,27 @@ p {
 
 /* Separator line */
 .separator {
-    height: 6px; /* Adjust the height as needed */
-    background-color: #dfb86a; /* Gold color */
-    margin: 0; /* Remove margin to align perfectly */
+    height: 60px;
+    background: repeating-linear-gradient(
+        45deg,
+        #b08d57,  /* Warm gold */
+        #b08d57 10px,
+        #f1c27d 10px, /* Lighter gold */
+        #f1c27d 20px,
+        #7c6535 20px, /* Bronze gold */
+        #7c6535 30px
+    ); /* Creates a diagonal stripe pattern with gold tones */
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 50px; /* Add space below the separator */
 }
+
+
+
+
+
+
+
 
 
 /* Gallery Section */
