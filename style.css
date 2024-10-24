@@ -612,6 +612,7 @@ p {
     border-radius: 20px;
     background-color: #081b29; /* Keep the background consistent with section */
     width: 100%; /* Ensure the item takes up full width */
+    text-align: center;
 }
 
 .gallery-item img {
@@ -621,6 +622,23 @@ p {
     object-fit: cover;
     background-color: #081b29; /* Ensures any gaps are black */
 }
+
+/* Media Queries for Larger Screens */
+
+/* For tablets and larger (min-width: 768px) */
+@media (min-width: 768px) {
+    .gallery-item img {
+        max-width: 90%; /* Slightly smaller images on tablets */
+    }
+}
+
+/* For laptops and larger (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .gallery-item img {
+        max-width: 80%; /* Smaller images on laptops/desktops */
+    }
+}
+
 
 
 /* Location section */
