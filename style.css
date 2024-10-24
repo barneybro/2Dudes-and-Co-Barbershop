@@ -239,11 +239,11 @@ header {
 
 .tagline {
     position: absolute;
-    top: 50%;
+    top: 50%; /* Centered by default */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .tagline h1 {
@@ -259,6 +259,12 @@ header {
     transform: scale(1.05); 
 }
 
+/* Media Query for Phones (min-width: 768px and below) */
+@media (max-width: 767px) {
+    .tagline {
+        top: 60%; /* Move the tagline lower on smaller screens */
+    }
+}
 
 
 
