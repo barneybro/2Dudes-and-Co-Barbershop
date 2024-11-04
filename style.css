@@ -463,6 +463,8 @@ header {
 .about-text p {
     font-size: 13px;
     line-height: 1.6;
+    text-align:justify;
+
 }
 
 /* Larger text for tablets and up */
@@ -532,6 +534,7 @@ header {
 .barber-box p {
     font-size: 13px;
     line-height: 1.6;
+    text-align:justify;
 }
 
 /* Larger text for tablets and up */
