@@ -262,7 +262,7 @@ header {
 /* Media Query for Phones (min-width: 768px and below) */
 @media (max-width: 767px) {
     .tagline {
-        top: 60%; /* Move the tagline lower on smaller screens */
+        top: 70%; /* Move the tagline lower on smaller screens */
     }
 }
 
@@ -644,7 +644,9 @@ p {
 /* For laptops and larger (min-width: 1024px) */
 @media (min-width: 1024px) {
     .gallery-item img {
-        max-width: 80%; /* Smaller images on laptops/desktops */
+        max-height: 1200px; /* Restrict the maximum height to 300px */
+        width: 40%; /* Maintain the aspect ratio */
+        object-fit: cover; /* Ensures proper fit while cropping excess parts */
     }
 }
 
