@@ -637,7 +637,7 @@ p {
 /* For tablets and larger (min-width: 768px) */
 @media (min-width: 768px) {
     .gallery-item img {
-        max-width: 80%; /* Slightly smaller images on tablets */
+        max-width: 70%; /* Slightly smaller images on tablets */
     }
 }
 
