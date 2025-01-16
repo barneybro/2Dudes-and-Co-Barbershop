@@ -40,56 +40,38 @@
 
         <div class="separator"></div>
 
-        <section class="gallery-section"></section>
+        <section class="gallery-section">
             <div class="gallery-grid">
+                <h2 class="gallery-heading">Tony’s Gallery</h2>
                 <div class="gallery-item">
                     <img src="pic1.png" alt="Gallery Image 1">
                 </div>
-
-                <hr class="divider">
-
                 <div class="gallery-item">
                     <img src="pic2.png" alt="Gallery Image 2">
                 </div>
-
-                <hr class="divider">
-
                 <div class="gallery-item">
                     <img src="pic3.png" alt="Gallery Image 3">
                 </div>
-
-                <hr class="divider">
-
                 <div class="gallery-item">
                     <img src="pic4.png" alt="Gallery Image 4">
                 </div>
-
-                <hr class="divider">
-
+        
+                <h2 class="gallery-heading">Ron’s Gallery</h2>
                 <div class="gallery-item">
                     <img src="pic5.png" alt="Gallery Image 5">
                 </div>
-
-                <hr class="divider">
-
                 <div class="gallery-item">
                     <img src="pic6.png" alt="Gallery Image 6">
                 </div>
-
-                <hr class="divider">
-
                 <div class="gallery-item">
-                    <img src="pic7.png" alt="Gallery Image 6">
+                    <img src="pic7.png" alt="Gallery Image 7">
                 </div>
-
-                <hr class="divider">
-
                 <div class="gallery-item">
-                    <img src="pic8.png" alt="Gallery Image 6">
+                    <img src="pic8.png" alt="Gallery Image 8">
                 </div>
-                
             </div>
         </section>
+        
 
          <!-- <div class="separator"></div> -->
 
@@ -155,6 +137,23 @@
                     sideNavigation.classList.remove('show');
                 }
             });
+
+            document.addEventListener('DOMContentLoaded', () => {
+            
+                const headings = document.querySelectorAll('.gallery-heading');
+            headings.forEach((heading, index) => {
+                heading.style.opacity = '0';
+                heading.style.transition = 'opacity 1s ease, transform 1s ease';
+                heading.style.transform = 'translateY(20px)';
+                
+                // Delay animation for each heading
+                setTimeout(() => {
+                    heading.style.opacity = '1';
+                    heading.style.transform = 'translateY(0)';
+                }, index * 500); // Stagger animations by 500ms
+            });
+        });
+
         </script>
     </body>
 </html>

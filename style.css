@@ -632,6 +632,27 @@ p {
     background-color: #081b29; /* Ensures any gaps are black */
 }
 
+.gallery-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #f1c27d; /* Lighter gold tone */
+    margin: 40px 0 20px; /* Add space above and below the heading */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #7c6535; /* Bronze gold border */
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.gallery-heading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+
 /* Media Queries for Larger Screens */
 
 /* For tablets and larger (min-width: 768px) */
