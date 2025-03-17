@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery Page</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="resources/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
     </head>
     <body>
         <header class="header">
             <a href="index.html" class="logo">
-                <img src="logo.jpeg" alt="2DudesAndCo Logo">
+                <img src="resources/logo.jpeg" alt="2DudesAndCo Logo">
             </a>
         
             <div class="hamburger" id="hamburger">
@@ -23,7 +23,7 @@
         
         <!-- Side Navigation (Off-Canvas Menu) -->
         <div class="side-navigation" id="side-navigation">
-            <img src="logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo">
+            <img src="resources/logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="ourBarbers.html">Our Barbers</a>
@@ -40,51 +40,50 @@
 
         <div class="separator"></div>
 
+
         <section class="gallery-section">
-            <div class="gallery-grid">
-                <h2 class="gallery-heading">Tony’s Gallery</h2>
-                <div class="gallery-item">
-                    <img src="pic1.png" alt="Gallery Image 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="pic2.png" alt="Gallery Image 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="pic3.png" alt="Gallery Image 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="pic4.png" alt="Gallery Image 4">
+            <div class="tabs">
+                <button class="tab-link active" data-barber="tony">Tony</button>
+                <button class="tab-link" data-barber="ron">Ron</button>
+                <button class="tab-link" data-barber="jet">Jet</button>
+            </div>
+        
+            <div class="gallery-container">
+                <div class="gallery-tab active" id="tony">
+                    <h2 class="gallery-heading">Tony’s Gallery</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="resources/pic1.png" alt="Tony's Cut 1"></div>
+                        <div class="gallery-item"><img src="resources/pic2.png" alt="Tony's Cut 2"></div>
+                        <div class="gallery-item"><img src="resources/pic3.png" alt="Tony's Cut 3"></div>
+                        <div class="gallery-item"><img src="resources/pic4.png" alt="Tony's Cut 4"></div>
+                    </div>
+                    <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
                 </div>
         
-                <h2 class="gallery-heading">Ron’s Gallery</h2>
-                <div class="gallery-item">
-                    <img src="pic5.png" alt="Gallery Image 5">
+                <div class="gallery-tab" id="ron">
+                    <h2 class="gallery-heading">Ron’s Gallery</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="resources/pic5.png" alt="Ron's Cut 1"></div>
+                        <div class="gallery-item"><img src="resources/pic6.jpeg" alt="Ron's Cut 2"></div>
+                        <div class="gallery-item"><img src="resources/pic7.png" alt="Ron's Cut 3"></div>
+                        <div class="gallery-item"><img src="resources/pic8.png" alt="Ron's Cut 4"></div>
+                    </div>
+                    <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
                 </div>
-                <div class="gallery-item">
-                    <img src="pic6.jpeg" alt="Gallery Image 6">
+        
+                <div class="gallery-tab" id="jet">
+                    <h2 class="gallery-heading">Jet’s Gallery</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="resources/pic9.png" alt="Jet's Cut 1"></div>
+                        <div class="gallery-item"><img src="resources/pic10.png" alt="Jet's Cut 2"></div>
+                        <div class="gallery-item"><img src="resources/pic11.png" alt="Jet's Cut 3"></div>
+                        <div class="gallery-item"><img src="resources/pic12.png" alt="Jet's Cut 4"></div>
+                    </div>
+                    <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
                 </div>
-                <div class="gallery-item">
-                    <img src="pic7.png" alt="Gallery Image 7">
-                </div>
-                <div class="gallery-item">
-                    <img src="pic8.png" alt="Gallery Image 8">
-                </div>
-
-                <h2 class="gallery-heading">Jet’s Gallery</h2>
-                <div class="gallery-item">
-                    <img src="pic9.png">
-                </div>
-                <div class="gallery-item">
-                    <img src="pic10.png">
-                </div>
-                <div class="gallery-item">
-                    <img src="pic11.png">
-                </div>
-                <div class="gallery-item">
-                    <img src="pic12.png">
-                </div>
-            </div>
         </section>
+        
+        
         
 
          <!-- <div class="separator"></div> -->
@@ -167,6 +166,30 @@
                 }, index * 500); // Stagger animations by 500ms
             });
         });
+
+
+        function scrollToTabs() {
+                const tabsSection = document.querySelector('.tabs');
+                tabsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const galleryTabs = document.querySelectorAll(".gallery-tab");
+
+        tabLinks.forEach((tab) => {
+            tab.addEventListener("click", function () {
+                let barber = this.getAttribute("data-barber");
+
+                tabLinks.forEach((t) => t.classList.remove("active"));
+                galleryTabs.forEach((tab) => tab.classList.remove("active"));
+
+                document.getElementById(barber).classList.add("active");
+                this.classList.add("active");
+            });
+        });
+    });
+
 
         </script>
     </body>

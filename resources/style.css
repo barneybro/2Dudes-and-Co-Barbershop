@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #081b29; /* Dark navy for contrast */
+    background-color: #081b29; 
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     font-family: "Garamond", serif;
@@ -19,7 +19,7 @@ header {
     width: 100%;
     height: 100vh; 
     background-blend-mode: overlay;
-    background-color: rgba(8, 27, 41, 0.5); /* Dark navy transparent overlay */
+    background-color: rgba(8, 27, 41, 0.5); 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -42,21 +42,21 @@ header {
 
 
 .logo {
-    position: relative; /* Set position to allow absolute positioning of the image */
+    position: relative; 
 }
 
 .logo img {
     width: 100px;
     height: 100px;
-    border-radius: 50%; /* Makes the image a circle */
-    background-color: white; /* Set the background to white */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Initial shadow */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform */
+    border-radius: 50%; 
+    background-color: white; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
 .logo img:hover {
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
-    transform: scale(1.05); /* Slightly enlarge the logo on hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5); 
+    transform: scale(1.05); 
 }
 
 
@@ -67,14 +67,14 @@ header {
 
 /* Hamburger menu: always visible */
 .hamburger {
-    display: flex; /* Displayed by default */
+    display: flex; 
     flex-direction: column;
     cursor: pointer;
     z-index: 101;
-    position: absolute; /* Positioned within the header */
+    position: absolute; 
     top: 70px; 
     right: 10%;
-    transition: top 0.4s ease; /* Smooth transition */
+    transition: top 0.4s ease; 
 }
 
 .hamburger span {
@@ -85,22 +85,22 @@ header {
     transition: 0.4s;
 }
 .line {
-    width: 100%; /* Full width of the hamburger */
-    height: 4px; /* Height of each line */
-    background-color: #333; /* Color of the lines */
-    border-radius: 5px; /* Rounded edges */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Shadow for each line */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+    width: 100%; 
+    height: 4px; 
+    background-color: #333; 
+    border-radius: 5px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s ease; 
 }
 
 .hamburger:hover .line {
-    background-color: #555; /* Change color on hover for a visual effect */
+    background-color: #555; 
 }
 
 /* Adjust position when scrolling starts */
 .scrolled .hamburger {
-    position: fixed; /* Fix the position when scrolling */
-    top: 20px; /* Adjust this for a smooth transition */
+    position: fixed; 
+    top: 20px; 
     right: 10%;
     z-index: 101;
 }
@@ -111,7 +111,17 @@ header {
 
 
 
-/* Navigation styles */
+
+
+
+
+
+
+
+
+
+
+/* Navigation */
 .navigation {
     display: flex;
     align-items: center;
@@ -136,7 +146,7 @@ header {
 
 /* Hide the navigation on scroll */
 .scrolled .navigation {
-    display: none; /* Hide normal navigation when scrolled */
+    display: none; 
 }
 
 /* Show the navigation when the hamburger is clicked */
@@ -166,71 +176,65 @@ header {
 .side-navigation {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially off-screen */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    right: -100%; 
+    width: 100%;
+    height: 100%; 
     background-color: rgba(0, 0, 0, 0.9);
-    transition: right 0.4s ease; /* Transition for slide-in effect */
+    transition: right 0.4s ease; 
     z-index: 200;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    justify-content: center;
+    align-items: center; 
 }
 
 /* Show the side navigation */
 .side-navigation.show {
-    right: 0; /* Slide in from the right */
+    right: 0; 
 }
 
-/* Increase the font size of side navigation links */
 .side-navigation a {
-    font-size: 35px; /* Increased font size of the links */
+    font-size: 35px; 
     color: #f1f1f1;
     text-decoration: none;
-    margin: 20px 0; /* Adjusted margin for spacing between sections */
+    margin: 20px 0;
     transition: color 0.3s ease;
 }
 
-/* Centered styling for the close button */
 /* Close button inside the side nav */
 .close-btn {
-    align-self: center; /* Center align the close button */
-    font-size: 50px; /* Increased the size of the close button */
+    align-self: center; 
+    font-size: 50px; 
     color: white;
     cursor: pointer;
-    margin: 20px 0; /* Add spacing above and below */
-    transition: color 0.3s ease; /* Optional: Add transition for hover effect */
+    margin: 20px 0; 
+    transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-    color: #dfb86a; /* Change color on hover for a visual effect */
+    color: #dfb86a; 
 }
 
 
 
 .side-navigation a:hover {
-    color: #dfb86a; /* Change to gold on hover */
+    color: #dfb86a; 
 }
 
 
 .side-navigation.show {
-    right: 0; /* Slide in from the right */
+    right: 0; 
 }
 
 .side-logo {
-    width: 80px; /* Set a small width */
-    height: 80px; /* Set a small height */
-    border-radius: 50%; /* Make it circular */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    margin: 10px auto; /* Center the logo and add some spacing */
-    display: block; /* Center the image as a block element */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow for effect */
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin: 10px auto; 
+    display: block; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
 }
-
-
-
-/* Close button inside the side nav */
 
 
 
@@ -239,7 +243,7 @@ header {
 
 .tagline {
     position: absolute;
-    top: 50%; /* Centered by default */
+    top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -265,6 +269,15 @@ header {
         top: 70%; /* Move the tagline lower on smaller screens */
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -369,25 +382,25 @@ header {
     color: #cfcfcf;
 }
 .footer-socials ion-icon {
-    font-size: 40px; /* Adjust size as needed */
-    margin: 0 30px;  /* Add spacing between icons */
-    color: #f1f1f1;  /* Color for the icons */
+    font-size: 40px; 
+    margin: 0 30px; 
+    color: #f1f1f1;  
     transition: color 0.3s ease;
 }
 
 .footer-socials ion-icon:hover {
-    color: #dfb86a; /* Change icon color on hover */
+    color: #dfb86a; 
 }
 
 .footer-content {
-    text-align: center; /* Center all footer content */
+    text-align: center; 
 }
 
 .appointment-btn-footer {
     display: inline-block;
-    margin-top: 50px; /* Space between socials and button */
+    margin-top: 50px; 
     padding: 10px 20px;
-    background-color: #ff5e57; /* Your preferred button color */
+    background-color: #ff5e57;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -401,8 +414,20 @@ header {
 }
 
 .appointment-btn-footer:hover {
-    background-color: #ff3b30; /* Darker shade on hover */
+    background-color: #ff3b30; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -412,29 +437,29 @@ header {
 /* About section */
 .about-section {
     padding: 60px 10%;
-    background-color: black; /* Dark navy for contrast */
+    background-color: black; 
 }
 
 .about-grid {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 40px; /* Space between the text and image */
-    align-items: center; /* Center the content */
-    text-align: center; /* Center text for both image and text */
+    flex-direction: column; 
+    gap: 40px; 
+    align-items: center; 
+    text-align: center; 
 }
 
 .about-item {
-    background-color: black; /* Dark navy for contrast */
+    background-color: black; 
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
-    max-width: 800px; /* Limit the width of the text and image */
+    max-width: 800px; 
 }
 .about-img img {
-    width: 100%; /* Ensure the image scales down */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Round corners */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    object-fit: cover; 
 }
 
 /* Media Queries for Responsiveness */
@@ -459,7 +484,6 @@ header {
     color: #dfb86a;
 }
 
-/* Current styling for all screens */
 .about-text p {
     font-size: 13px;
     line-height: 1.6;
@@ -486,34 +510,43 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
 /*Barbers section*/
 .barber-section {
     padding: 40px 10%;
-    background-color: black; /* Dark navy for contrast */
+    background-color: black; 
     text-align: center;
 }
 
 .row {
     display: flex;
-    flex-direction: column; /* Stack the items vertically */
-    align-items: center; /* Center the items horizontally */
-    gap: 20px; /* Space between text and image */
-    margin-bottom: 50px; /* Space between rows */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    margin-bottom: 50px; 
 }
 
 .barber-box {
-    max-width: 80%; /* Limit the width of the content */
-    background-color: black; /* Dark navy for contrast */
+    max-width: 80%; 
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
 }
 
 .barber-image {
-    width: 100%; /* Ensure the image scales down */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     border-radius: 10px;
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    object-fit: cover; 
 }
 
 /* Media Queries for Responsiveness */
@@ -563,12 +596,17 @@ p {
     color: #cfcfcf;
 }
 .divider {
-    width: 80%; /* Adjusts the width of the line */
-    margin: 40px auto; /* Adds space above and below the line */
-    border: none; /* Removes default styling */
-    border-top: 1px solid #dfb86a; /* Adds a subtle line with your accent color */
-    opacity: 0.5; /* Lowers opacity for a more subtle effect */
+    width: 80%; 
+    margin: 40px auto; 
+    border: none; 
+    border-top: 1px solid #dfb86a; 
+    opacity: 0.5; 
 }
+
+
+
+
+
 
 
 
@@ -597,50 +635,136 @@ p {
 
 
 
+
+
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 180px; 
+    margin-bottom: 30px; 
+}
+
+.tab-link {
+    background-color: #7c6535;
+    color: white;
+    border: none;
+    padding: 15px 35px; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.tab-link:hover {
+    background-color: #9b7e46; 
+    transform: scale(1.05); 
+}
+
+.tab-link.active {
+    background-color: #f1c27d;
+    color: black;
+    transform: scale(1.08); 
+}
+
+
+.tab-link.active {
+    background-color: #f1c27d;
+    color: black;
+}
+
+.gallery-tab {
+    display: none;
+}
+
+.gallery-tab.active {
+    display: block;
+}
+
+.gallery-tab {
+    position: relative; 
+}
+
+.back-to-tabs-btn {
+    display: block;
+    margin-top: 10px; 
+    padding: 5px 15px; 
+    background-color: #7c6535;
+    color: white;
+    border: none;
+    font-size: 0.9rem; 
+    cursor: pointer;
+    border-radius: 8px;
+    width: auto; 
+    text-align: center; 
+    transition: background-color 0.3s;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.back-to-tabs-btn:hover {
+    background-color: #9b7e46;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px; 
+}
+
+
+
+
+
+
+
 /* Gallery Section */
 .gallery-section {
     padding: 30px 10%;
-    background-color: #081b29; /* Set black background for the whole section */
+    background-color: #081b29; 
     text-align: center;
 }
 
 .gallery-grid {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
-    align-items: center; /* Center the images horizontally */
-    gap: 50px; /* Space between images */
-    max-width: 80%; /* Restrict the overall width */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 50px; 
+    max-width: 80%; 
     margin: 0 auto;
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 20px 0; /* Add top and bottom padding */
-    background-color: #081b29; /* Ensure this is the same color as the section */
+    overflow-y: auto;
+    padding: 20px 0;
+    background-color: #081b29; 
 }
 
 .gallery-item {
     padding: 20px;
     border-radius: 20px;
-    background-color: #081b29; /* Keep the background consistent with section */
-    width: 100%; /* Ensure the item takes up full width */
+    background-color: #081b29;
+    width: 100%; 
     text-align: center;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Round the corners of the images */
+    border-radius: 10px; 
     object-fit: cover;
-    background-color: #081b29; /* Ensures any gaps are black */
+    background-color: #081b29; 
 }
 
 .gallery-heading {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #f1c27d; /* Lighter gold tone */
-    margin: 40px 0 20px; /* Add space above and below the heading */
+    color: #f1c27d;
+    margin: 40px 0 20px; 
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 3px solid #7c6535; /* Bronze gold border */
+    border-bottom: 3px solid #7c6535; 
     padding-bottom: 10px;
     width: 100%;
 }
@@ -650,6 +774,9 @@ p {
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
+
+
+
 
 
 
@@ -673,24 +800,32 @@ p {
 
 
 
+
+
+
+
+
+
+
+
 /* Location section */
 .location-section {
     padding: 60px 10%;
-    background-color: black; /* Dark navy for contrast */
+    background-color: black; 
 }
 
 .location-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 40px; /* Space between sections */
-    justify-items: center; /* Center content horizontally */
-    margin: 0 auto 100px auto; /* Space below the last section */
-    background-color: black; /* Dark navy for contrast */
+    grid-template-columns: 1fr; 
+    gap: 40px;
+    justify-items: center;
+    margin: 0 auto 100px auto; 
+    background-color: black; 
 }
 
 /* Style for the location box */
 .location-box {
-    background-color: black; /* Dark navy for contrast */
+    background-color: black; 
     padding: 20px;
     border-radius: 10px;
     color: #f1f1f1;
@@ -710,20 +845,20 @@ p {
 /* Style for the map */
 .map-placeholder {
     width: 100%;
-    max-width: 800px; /* Max width for the iframe */
+    max-width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px; /* Adjust to match iframe height */
-    background-color: black; /* Dark navy for contrast */
+    height: 450px; 
+    background-color: black; 
 }
 
 .map-placeholder iframe {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 10px; /* Add a slight border radius */
-    background-color: black; /* Dark navy for contrast */
+    border-radius: 10px;
+    background-color: black; 
 }
 
 
