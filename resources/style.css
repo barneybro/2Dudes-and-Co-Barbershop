@@ -716,6 +716,25 @@ p {
 }
 
 
+@media (max-width: 767px) {
+    .tabs {
+        flex-direction: column; /* Stack tabs vertically on phones */
+        gap: 10px; /* Reduce gap between buttons */
+        align-items: center; /* Center them */
+    }
+
+    .tab-link {
+        padding: 10px 20px; /* Reduce padding */
+        font-size: 1rem; /* Smaller text size */
+        width: 80%; /* Limit width to not overflow */
+        max-width: 300px; /* Prevent excessive width on larger phones */
+    }
+}
+
+
+
+
+
 
 
 
