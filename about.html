@@ -1,121 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Us Page</title>
-        <link rel="stylesheet" href="resources/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    </head>
-    <body>
-        <header class="header">
-            <a href="index.html" class="logo">
-                <img src="resources/logo.jpeg" alt="2DudesAndCo Logo">
-            </a>
-        
-            <div class="hamburger" id="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+    <title>About • 2DudesAndCo Barbershop</title>
+    <meta name="description" content="A welcoming, family-style barbershop in Ephrata, PA. Learn our story and what makes 2DudesAndCo different—traditional craft, modern style, and community vibes." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="resources/style.css" />
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <!-- IMPORTANT: page-scoped class -->
+  <body class="about-page">
+    <!-- Use your global header markup/classes; this keeps other pages unaffected -->
+    <header class="header" id="site-header">
+      <a href="index.html" class="logo" aria-label="Go to homepage">
+        <img src="resources/logo.jpeg" alt="2DudesAndCo Barbershop logo" />
+      </a>
+
+      <!-- Keep your existing hamburger markup; About-only CSS will reposition it -->
+      <div class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="side-navigation" aria-expanded="false">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </header>
+
+    <!-- Off-canvas navigation (reuses your classes) -->
+    <div class="side-navigation" id="side-navigation" aria-hidden="true" aria-label="Site">
+      <img src="resources/logo.jpeg" alt="2DudesAndCo mark" class="side-logo" />
+      <div class="close-btn" id="close-btn" aria-label="Close menu" role="button" tabindex="0">&times;</div>
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="ourBarbers.html">Our Barbers</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="location.html">Location</a>
+      <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1" target="_blank" rel="noopener" class="appointment-btn">Appointment</a>
+    </div>
+
+    <section class="hero">
+      <h1>Who We Are</h1>
+      <p>Born from a love of clean cuts and good conversation. We blend classic barbering with modern style to make everyone feel at home.</p>
+    </section>
+
+    <main>
+      <section class="section">
+        <div class="container about">
+          <article class="card copy">
+            <div class="eyebrow">Our Story</div>
+            <h2>Traditional Craft. Modern Vibe.</h2>
+            <p>
+              2Dudes Barbershop started as a simple idea: keep the quality high and the vibes welcoming.
+            Our barbers bring years of craft fade work, hot towel shaves, beard shaping while staying sharp
+            on current trends. Whether it’s a first cut or your weekly clean up, we dial in the details and listen to what you want.
+            </p>
+            <div class="values">
+              <div class="pill">Precision Fades</div>
+              <div class="pill">Hot Towel Shaves</div>
+              <div class="pill">Beard Sculpting</div>
+              <div class="pill">Family-Friendly</div>
             </div>
-        </header>
-        
-        <!-- Side Navigation (Off-Canvas Menu) -->
-        <div class="side-navigation" id="side-navigation">
-            <img src="resources/logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="ourBarbers.html">Our Barbers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="location.html">Location</a>
-            <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1?fbclid=PAZXh0bgNhZW0CMTEAAabCYeroZTtIMek0ph-MTLcME6DVND3K94c-600jYtHQwNmE37wnS8DSqFc_aem_JU0v6Y3-4oCxgHH_Ka63xg" target="_blank"  class="appointment-btn">Appointment</a>
-            <div class="close-btn" id="close-btn">&times;</div>
+          </article>
 
+          <figure class="card photo" aria-label="Barbershop interior">
+            <img src="resources/aboutus.jpeg" alt="Warm, modern interior at 2Dudes Barbershop" />
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <!-- Add a modifier class so About can have a different footer style
+         without touching other pages’ footers -->
+    <footer class="footer footer--modern" role="contentinfo">
+      <div class="inner">
+        <div class="footer-content">
+          <h3>2DudesAndCo Barbershop</h3>
+          <p>922 N Reading Rd, Ephrata, PA 17522</p>
         </div>
 
-        <div class="tagline">
-            <h1>Who We Are</h1>
+        <div class="footer-socials socials" aria-label="Social links">
+          <a href="https://www.facebook.com/two.dudes.barbershop/about/" target="_blank" rel="noopener" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://www.instagram.com/2dudesbarbershop" target="_blank" rel="noopener" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
         </div>
 
-        <section class="about-section">
-            <div class="about-grid">
-                <!-- First Row -->
-                <div class="about-item about-text">
-                    <h2>Our Story</h2>
-                    <hr class="divider">
-                    <p>2Dudes Barbershop was founded with a passion for quality grooming and style. Our experienced barbers are dedicated to giving each client a personalized experience, blending traditional techniques with modern trends.
-                         At Two Dudes, we pride ourselves on creating a welcoming, family-style atmosphere where everyone feels at home.
-                    </p>
-                </div>
-                <div class="about-item about-img">
-                    <img src="resources/about us.jpeg" alt="Our Story Image">
-                </div>
-                
-        </section>
+        <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1"
+           target="_blank" rel="noopener" class="btn primary appointment-btn-footer">
+          Book an Appointment
+        </a>
+      </div>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <h3>2DudesAndCo Barbershop</h3>
-                <p>922 N Reading Rd, Ephrata, PA 17522</p>
+      <div class="footer-bottom">© 2025 2DudesAndCo. All rights reserved.</div>
+    </footer>
 
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/two.dudes.barbershop/about/" target="_blank">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                    <a href="https://www.instagram.com/2dudesbarbershop?igsh=MW1kbnRrZWptdjhrcw==" target="_blank">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                    <!-- <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a> -->
-                </div>
-            </div>
+    <script>
+      // Keep your existing JS, just scoped to the elements on this page
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      });
 
-            <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1?fbclid=PAZXh0bgNhZW0CMTEAAabCYeroZTtIMek0ph-MTLcME6DVND3K94c-600jYtHQwNmE37wnS8DSqFc_aem_JU0v6Y3-4oCxgHH_Ka63xg" target="_blank" class="appointment-btn-footer">Book an Appointment</a>
+      const hamburger = document.getElementById('hamburger');
+      const sideNavigation = document.getElementById('side-navigation');
+      const closeBtn = document.getElementById('close-btn');
 
+      hamburger.addEventListener('click', function() {
+        sideNavigation.classList.toggle('show');
+      });
 
-        </footer>
-        <div class="footer-bottom">
-            <p>&copy; 2025 2DudesAndCo. All rights reserved.</p>
-        </div>
+      closeBtn.addEventListener('click', function() {
+        sideNavigation.classList.remove('show');
+      });
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      window.addEventListener('click', function(event) {
+        if (!sideNavigation.contains(event.target) && !hamburger.contains(event.target)) {
+          sideNavigation.classList.remove('show');
+        }
+      });
 
-        <script>
-            // Handle scrolling event to toggle 'scrolled' class
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('.header');
-                
-                // Add 'scrolled' class to header when scrolling down beyond 50px
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled'); // Remove 'scrolled' class when scrolled back to the top
-                }
-            });
-        
-            // Select elements
-            const hamburger = document.getElementById('hamburger');
-            const sideNavigation = document.getElementById('side-navigation');
-            const closeBtn = document.getElementById('close-btn');
-        
-            // Toggle the side navigation when hamburger is clicked
-            hamburger.addEventListener('click', function() {
-                sideNavigation.classList.toggle('show');
-            });
-        
-            // Close the side navigation when the close button is clicked
-            closeBtn.addEventListener('click', function() {
-                sideNavigation.classList.remove('show');
-            });
-        
-            // Optionally, close the side navigation when clicking outside of it
-            window.addEventListener('click', function(event) {
-                if (!sideNavigation.contains(event.target) && !hamburger.contains(event.target)) {
-                    sideNavigation.classList.remove('show');
-                }
-            });
-        </script>
- 
-    </body>
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') sideNavigation.classList.remove('show'); });
+    </script>
+  </body>
 </html>

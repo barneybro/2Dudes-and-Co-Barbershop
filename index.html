@@ -1,164 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Homepage</title>
-        <link rel="stylesheet" href="resources/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage • 2DudesAndCo</title>
 
-    </head>
-    <body>
-        <header class="indexHeader">
-            <a href="index.html" class="logo">
-                <img src="resources/logo.jpeg" alt="2DudesAndCo Logo">
-            </a>
-        
-            <div class="hamburger" id="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
-        </header>
-        
-        <!-- Side Navigation (Off-Canvas Menu) -->
-        <div class="side-navigation" id="side-navigation">
-            <img src="resources/logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="ourBarbers.html">Our Barbers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="location.html">Location</a>
-            <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1?fbclid=PAZXh0bgNhZW0CMTEAAabCYeroZTtIMek0ph-MTLcME6DVND3K94c-600jYtHQwNmE37wnS8DSqFc_aem_JU0v6Y3-4oCxgHH_Ka63xg" target="_blank"  class="appointment-btn">Appointment</a>
-            <div class="close-btn" id="close-btn">&times;</div>
+    <link rel="stylesheet" href="resources/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
 
-        </div>
-        
+  <body>
+    <header class="header" id="site-header">
+      <a href="index.html" class="logo" aria-label="Go to homepage">
+        <img src="resources/logo.jpeg" alt="2DudesAndCo Logo" />
+      </a>
 
-        <div class="tagline">
-            <h1>Cut Above the Rest with 2Dudes.</h1>
-        </div>
+      <div class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="side-navigation" aria-expanded="false">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </div>
+    </header>
 
-        <!-- Corrected services section -->
-        <section class="services">
-            <h2>Services</h2>
+  <div class="side-navigation" id="side-navigation" aria-hidden="true" aria-label="Site">
+      <img src="resources/logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo" />
+      <div class="close-btn" id="close-btn" aria-label="Close menu" role="button" tabindex="0">&times;</div>
 
-            <hr class="divider">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="ourBarbers.html">Our Barbers</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="location.html">Location</a>
+      <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1" target="_blank" rel="noopener" class="appointment-btn">Appointment</a>
+    </div>
 
-            
-            <div class="service-item">
-                <h3>Mens Haircut (Number Cut) - $25</h3>
-                <!-- <p>(Mens and boys hairstyle that has hair long enough to comb on top and a short, semi-short, medium, long, or extra-long back and sides)</p> -->
-            </div>
+   <!-- IMPORTANT: the class MUST be hero--home to pick up the background image styles -->
+    <section class="hero--home">
+      <div class="hero-inner">
+        <div class="tagline"><h1>Cut Above the Rest with 2Dudes.</h1></div>
+        <p>Classic barbering. Modern style. Welcoming vibes for the whole family.</p>
+        <a class="btn primary" href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1" target="_blank" rel="noopener">Book Now</a>
+      </div>
+    </section>
 
-            <div class="service-item">
-                <h3>Mens Haircut (With Fade) - $35</h3>
-                <!-- <p>(Skin fade, temple/blowouts, mohawks, uve, mullets, etc.)</p> -->
-            </div>
+    <!-- Services -->
+    <section class="services">
+      <h2>Services</h2>
+      <hr class="divider" />
 
-            <div class="service-item">
-                <h3>Mens Beard Only - $20</h3>
-            </div>
+      <div class="service-item"><h3>Mens Haircut (Number Cut) - $25</h3></div>
+      <div class="service-item"><h3>Mens Haircut (With Fade) - $35</h3></div>
+      <div class="service-item"><h3>Mens Beard Only - $20</h3></div>
+      <div class="service-item"><h3>Mens Beard + Cut - $40</h3></div>
+      <div class="service-item"><h3>Senior Cut - $15 (62+)</h3></div>
+      <div class="service-item"><h3>Senior Beard Only - $10</h3></div>
+      <div class="service-item"><h3>Senior Cut + Beard - $20</h3></div>
+      <div class="service-item"><h3>Kids Haircut - $25</h3></div>
+      <div class="service-item"><h3>Kids Haircut + Design - $30</h3></div>
+      <div class="service-item"><h3>Shape Up - $20</h3></div>
+      <div class="service-item"><h3>Womens Undercut - $30</h3></div>
+    </section>
 
-            <div class="service-item">
-                <h3>Mens Beard + Cut - $40</h3>
-            </div>
-
-            <div class="service-item">
-                <h3>Senior Cut - $15 (62 +) </h3>
-            </div>
-
-            <div class="service-item">
-                <h3>Senior Beard Only - $10</h3>
-            </div>
-
-            <div class="service-item">
-                <h3>Senior Cut + Beard - $20</h3>
-            </div>
-
-            <div class="service-item">
-                <h3>Kids Haircut - $25</h3>
-            </div>
-
-            <div class="service-item">
-                <h3>Kids Haircut + Design - $30</h3>
-            </div>
-
-            <div class="service-item">
-                <h3>Shape Up - $20</h3>
-            </div>
-
-            <div class="service-item">
-                <h3>Womens Undercut - $30</h3>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <h3>2DudesAndCo Barbershop</h3>
-                <p>922 N Reading Rd, Ephrata, PA 17522</p>
-
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/two.dudes.barbershop/about/" target="_blank">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                    <a href="https://www.instagram.com/2dudesbarbershop?igsh=MW1kbnRrZWptdjhrcw==" target="_blank">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                    <!-- <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a> -->
-                </div>
-            </div>
-
-            <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1?fbclid=PAZXh0bgNhZW0CMTEAAabCYeroZTtIMek0ph-MTLcME6DVND3K94c-600jYtHQwNmE37wnS8DSqFc_aem_JU0v6Y3-4oCxgHH_Ka63xg" target="_blank" class="appointment-btn-footer">Book an Appointment</a>
-
-
-        </footer>
-        <div class="footer-bottom">
-            <p>&copy; 2025 2DudesAndCo. All rights reserved.</p>
+    <!-- Footer (shared across all pages) -->
+    <footer class="footer" role="contentinfo">
+      <div class="inner">
+        <div class="footer-content">
+          <h3>2DudesAndCo Barbershop</h3>
+          <p>922 N Reading Rd, Ephrata, PA 17522</p>
         </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <div class="socials" aria-label="Social links">
+          <a href="https://www.facebook.com/two.dudes.barbershop/about/" target="_blank" rel="noopener" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://www.instagram.com/2dudesbarbershop" target="_blank" rel="noopener" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
 
-        <script>
-                    // Handle scrolling event to toggle 'scrolled' class
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('.indexHeader');
-                
-                // Add 'scrolled' class to header when scrolling down beyond 50px
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled'); // Remove 'scrolled' class when scrolled back to the top
-                }
-            });
+        <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1" target="_blank" rel="noopener" class="btn primary">
+          Book an Appointment
+        </a>
+      </div>
 
-            // Select elements
-            const hamburger = document.getElementById('hamburger');
-            const sideNavigation = document.getElementById('side-navigation');
-            const closeBtn = document.getElementById('close-btn');
+      <div class="footer-bottom">© 2025 2DudesAndCo. All rights reserved.</div>
+    </footer>
 
-            // Toggle the side navigation when hamburger is clicked
-            hamburger.addEventListener('click', function() {
-                sideNavigation.classList.toggle('show'); // Show or hide the side navigation
-            });
+    <!-- Scripts -->
+    <script>
+      const header = document.getElementById("site-header");
+      const hamburger = document.getElementById("hamburger");
+      const sideNavigation = document.getElementById("side-navigation");
+      const closeBtn = document.getElementById("close-btn");
 
-            // Close the side navigation when the close button is clicked
-            closeBtn.addEventListener('click', function() {
-                sideNavigation.classList.remove('show'); // Hide the side navigation
-            });
+      // Header shadow on scroll
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+      });
 
-            // Optionally, close the side navigation when clicking outside of it
-            window.addEventListener('click', function(event) {
-                if (!sideNavigation.contains(event.target) && !hamburger.contains(event.target)) {
-                    sideNavigation.classList.remove('show'); // Hide when clicking outside
-                }
-            });
-
-        </script>
-        
-        
-        
-        
-    </body>
+      // Toggle side nav
+      hamburger.addEventListener("click", function () {
+        sideNavigation.classList.toggle("show");
+      });
+      closeBtn.addEventListener("click", function () {
+        sideNavigation.classList.remove("show");
+      });
+      window.addEventListener("click", function (event) {
+        if (!sideNavigation.contains(event.target) && !hamburger.contains(event.target)) {
+          sideNavigation.classList.remove("show");
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") sideNavigation.classList.remove("show");
+      });
+    </script>
+  </body>
 </html>

@@ -1,216 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gallery Page</title>
-        <link rel="stylesheet" href="resources/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery • 2DudesAndCo</title>
 
-    </head>
-    <body>
-        <header class="header">
-            <a href="index.html" class="logo">
-                <img src="resources/logo.jpeg" alt="2DudesAndCo Logo">
-            </a>
-        
-            <div class="hamburger" id="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
-        </header>
-        
-        <!-- Side Navigation (Off-Canvas Menu) -->
-        <div class="side-navigation" id="side-navigation">
-            <img src="resources/logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="ourBarbers.html">Our Barbers</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="location.html">Location</a>
-            <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1?fbclid=PAZXh0bgNhZW0CMTEAAabCYeroZTtIMek0ph-MTLcME6DVND3K94c-600jYtHQwNmE37wnS8DSqFc_aem_JU0v6Y3-4oCxgHH_Ka63xg" target="_blank"  class="appointment-btn">Appointment</a>
-            <div class="close-btn" id="close-btn">&times;</div>
+    <link rel="stylesheet" href="resources/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <body class="about-page">
+    <header class="header" id="site-header">
+      <a href="index.html" class="logo" aria-label="Go to homepage">
+        <img src="resources/logo.jpeg" alt="2DudesAndCo Logo" />
+      </a>
+
+      <div class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="side-navigation" aria-expanded="false">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </div>
+    </header>
+
+    <div class="side-navigation" id="side-navigation" aria-hidden="true" aria-label="Site">
+      <img src="resources/logo.jpeg" alt="Two Dudes and Co Logo" class="side-logo" />
+      <div class="close-btn" id="close-btn" aria-label="Close menu" role="button" tabindex="0">&times;</div>
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ourBarbers.html">Our Barbers</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="location.html">Location</a>
+      <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1" target="_blank" rel="noopener" class="appointment-btn">Appointment</a>
+    </div>
+
+    <section class="hero">
+      <h1>Where Every Cut Becomes a Masterpiece</h1>
+      <p>Browse looks from our barbers + tap a name to switch galleries.</p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <div class="tabs">
+        <button class="tab-link active" data-barber="tony">Tony</button>
+        <button class="tab-link" data-barber="ron">Ron</button>
+        <button class="tab-link" data-barber="jet">Jet</button>
+        <button class="tab-link" data-barber="breeze">Breeze</button>
+      </div>
+
+      <div class="gallery-container">
+        <div class="gallery-tab active" id="tony">
+          <h2 class="gallery-heading">Tony’s Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="resources/pic1.png" alt="Tony's Cut 1" /></div>
+            <div class="gallery-item"><img src="resources/pic2.png" alt="Tony's Cut 2" /></div>
+            <div class="gallery-item"><img src="resources/pic3.png" alt="Tony's Cut 3" /></div>
+            <div class="gallery-item"><img src="resources/pic4.png" alt="Tony's Cut 4" /></div>
+          </div>
+          <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
         </div>
 
-        <div class="tagline">
-            <h1>Where Every Cut Becomes a Masterpiece</h1>
+        <div class="gallery-tab" id="ron">
+          <h2 class="gallery-heading">Ron’s Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="resources/pic5.png" alt="Ron's Cut 1" /></div>
+            <div class="gallery-item"><img src="resources/pic6.jpeg" alt="Ron's Cut 2" /></div>
+            <div class="gallery-item"><img src="resources/pic7.png" alt="Ron's Cut 3" /></div>
+            <div class="gallery-item"><img src="resources/pic8.png" alt="Ron's Cut 4" /></div>
+            <div class="gallery-item"><img src="resources/roncut5.jpeg" alt="Ron's Cut 5" /></div>
+            <div class="gallery-item"><img src="resources/roncut6.jpeg" alt="Ron's Cut 6" /></div>
+            <div class="gallery-item"><img src="resources/roncut7.jpeg" alt="Ron's Cut 7" /></div>
+            <div class="gallery-item"><img src="resources/roncut8.jpeg" alt="Ron's Cut 8" /></div>
+          </div>
+          <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
         </div>
 
-        <div class="separator"></div>
-
-
-        <section class="gallery-section">
-            <div class="tabs">
-                <button class="tab-link active" data-barber="tony">Tony</button>
-                <button class="tab-link" data-barber="ron">Ron</button>
-                <button class="tab-link" data-barber="jet">Jet</button>
-                <button class="tab-link" data-barber="breeze">Breeze</button>
-            </div>
-        
-            <div class="gallery-container">
-                <div class="gallery-tab active" id="tony">
-                    <h2 class="gallery-heading">Tony’s Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="resources/pic1.png" alt="Tony's Cut 1"></div>
-                        <div class="gallery-item"><img src="resources/pic2.png" alt="Tony's Cut 2"></div>
-                        <div class="gallery-item"><img src="resources/pic3.png" alt="Tony's Cut 3"></div>
-                        <div class="gallery-item"><img src="resources/pic4.png" alt="Tony's Cut 4"></div>
-                    </div>
-                    <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
-                </div>
-        
-                <div class="gallery-tab" id="ron">
-                    <h2 class="gallery-heading">Ron’s Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="resources/pic5.png" alt="Ron's Cut 1"></div>
-                        <div class="gallery-item"><img src="resources/pic6.jpeg" alt="Ron's Cut 2"></div>
-                        <div class="gallery-item"><img src="resources/pic7.png" alt="Ron's Cut 3"></div>
-                        <div class="gallery-item"><img src="resources/pic8.png" alt="Ron's Cut 4"></div>
-                        <div class="gallery-item"><img src="resources/roncut5.jpeg" alt="Ron's Cut 5"></div>
-                        <div class="gallery-item"><img src="resources/roncut6.jpeg" alt="Ron's Cut 6"></div>
-                        <div class="gallery-item"><img src="resources/roncut7.jpeg" alt="Ron's Cut 7"></div>
-                        <div class="gallery-item"><img src="resources/roncut8.jpeg" alt="Ron's Cut 8"></div>
-
-
-
-                    </div>
-                    <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
-                </div>
-        
-                <div class="gallery-tab" id="jet">
-                    <h2 class="gallery-heading">Jet’s Gallery</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="resources/pic9.png" alt="Jet's Cut 1"></div>
-                        <div class="gallery-item"><img src="resources/pic10.png" alt="Jet's Cut 2"></div>
-                        <div class="gallery-item"><img src="resources/pic11.png" alt="Jet's Cut 3"></div>
-                        <div class="gallery-item"><img src="resources/pic12.png" alt="Jet's Cut 4"></div>
-                    </div>
-                    <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
-                </div>
-
-                <div class="gallery-tab" id="breeze">
-                    <h2 class="gallery-heading">Breeze’s Gallery</h2>
-                    <h1 style="color: white;">Coming Soon!</h1>
-                    <!-- <div class="gallery-grid">
-                        <div class="gallery-item"><img src="resources/breeze1.jpeg" alt="Breeze's Cut 1"></div>
-                        <div class="gallery-item"><img src="resources/breeze2.jpeg" alt="Breeze's Cut 2"></div>
-                        <div class="gallery-item"><img src="resources/breeze3.jpeg" alt="Breeze's Cut 3"></div>
-                        <div class="gallery-item"><img src="resources/breeze4.jpeg" alt="Breeze's Cut 4"></div> -->
-                    <!-- </div> -->
-                    <!-- <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button> -->
-                </div>
-        </section>
-        
-        
-        
-
-         <!-- <div class="separator"></div> -->
-
-
-        <footer class="footer">
-            <div class="footer-content">
-                <h3>2DudesAndCo Barbershop</h3>
-                <p>922 N Reading Rd, Ephrata, PA 17522</p>
-
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/two.dudes.barbershop/about/" target="_blank">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                    <a href="https://www.instagram.com/2dudesbarbershop?igsh=MW1kbnRrZWptdjhrcw==" target="_blank">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                    <!-- <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a> -->
-                </div>
-            </div>
-
-            <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1?fbclid=PAZXh0bgNhZW0CMTEAAabCYeroZTtIMek0ph-MTLcME6DVND3K94c-600jYtHQwNmE37wnS8DSqFc_aem_JU0v6Y3-4oCxgHH_Ka63xg" target="_blank" class="appointment-btn-footer">Book an Appointment</a>
-
-
-        </footer>
-        <div class="footer-bottom">
-            <p>&copy; 2025 2DudesAndCo. All rights reserved.</p>
+        <div class="gallery-tab" id="jet">
+          <h2 class="gallery-heading">Jet’s Gallery</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="resources/pic9.png" alt="Jet's Cut 1" /></div>
+            <div class="gallery-item"><img src="resources/pic10.png" alt="Jet's Cut 2" /></div>
+            <div class="gallery-item"><img src="resources/pic11.png" alt="Jet's Cut 3" /></div>
+            <div class="gallery-item"><img src="resources/pic12.png" alt="Jet's Cut 4" /></div>
+          </div>
+          <button class="back-to-tabs-btn" onclick="scrollToTabs()">Back to Tabs</button>
         </div>
-        
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-        <script>
-            // Handle scrolling event to toggle 'scrolled' class
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('.header');
-                
-                // Add 'scrolled' class to header when scrolling down beyond 50px
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled'); // Remove 'scrolled' class when scrolled back to the top
-                }
-            });
-        
-            // Select elements
-            const hamburger = document.getElementById('hamburger');
-            const sideNavigation = document.getElementById('side-navigation');
-            const closeBtn = document.getElementById('close-btn');
-        
-            // Toggle the side navigation when hamburger is clicked
-            hamburger.addEventListener('click', function() {
-                sideNavigation.classList.toggle('show');
-            });
-        
-            // Close the side navigation when the close button is clicked
-            closeBtn.addEventListener('click', function() {
-                sideNavigation.classList.remove('show');
-            });
-        
-            // Optionally, close the side navigation when clicking outside of it
-            window.addEventListener('click', function(event) {
-                if (!sideNavigation.contains(event.target) && !hamburger.contains(event.target)) {
-                    sideNavigation.classList.remove('show');
-                }
-            });
+        <div class="gallery-tab" id="breeze">
+          <h2 class="gallery-heading">Breeze’s Gallery</h2>
+          <h1 style="color: white;">Coming Soon!</h1>
+        </div>
+      </div>
+    </section>
 
-            document.addEventListener('DOMContentLoaded', () => {
-            
-                const headings = document.querySelectorAll('.gallery-heading');
-            headings.forEach((heading, index) => {
-                heading.style.opacity = '0';
-                heading.style.transition = 'opacity 1s ease, transform 1s ease';
-                heading.style.transform = 'translateY(20px)';
-                
-                // Delay animation for each heading
-                setTimeout(() => {
-                    heading.style.opacity = '1';
-                    heading.style.transform = 'translateY(0)';
-                }, index * 500); // Stagger animations by 500ms
-            });
+    <!-- Footer (unified) -->
+    <footer class="footer" role="contentinfo">
+      <div class="inner">
+        <div class="footer-content">
+          <h3>2DudesAndCo Barbershop</h3>
+          <p>922 N Reading Rd, Ephrata, PA 17522</p>
+        </div>
+
+        <div class="socials" aria-label="Social links">
+          <a href="https://www.facebook.com/two.dudes.barbershop/about/" target="_blank" rel="noopener" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://www.instagram.com/2dudesbarbershop" target="_blank" rel="noopener" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+
+        <a href="https://booksy.com/en-us/1331666_2-dudes-company-barbershop_barber-shop_33958_ephrata#ba_s=sh_1" target="_blank" rel="noopener" class="btn primary">
+          Book an Appointment
+        </a>
+      </div>
+
+      <div class="footer-bottom">© 2025 2DudesAndCo. All rights reserved.</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Header shadow on scroll
+      const header = document.getElementById("site-header");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+      });
+
+      // Side nav
+      const hamburger = document.getElementById("hamburger");
+      const sideNavigation = document.getElementById("side-navigation");
+      const closeBtn = document.getElementById("close-btn");
+      hamburger.addEventListener("click", () => sideNavigation.classList.toggle("show"));
+      closeBtn.addEventListener("click",  () => sideNavigation.classList.remove("show"));
+      window.addEventListener("click", (e) => {
+        if (!sideNavigation.contains(e.target) && !hamburger.contains(e.target)) sideNavigation.classList.remove("show");
+      });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") sideNavigation.classList.remove("show"); });
+
+      // Animate headings in
+      document.addEventListener('DOMContentLoaded', () => {
+        const headings = document.querySelectorAll('.gallery-heading');
+        headings.forEach((heading, index) => {
+          heading.style.opacity = '0';
+          heading.style.transition = 'opacity 1s ease, transform 1s ease';
+          heading.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            heading.style.opacity = '1';
+            heading.style.transform = 'translateY(0)';
+          }, index * 500);
         });
+      });
 
-
-        function scrollToTabs() {
-                const tabsSection = document.querySelector('.tabs');
-                tabsSection.scrollIntoView({ behavior: 'smooth' });
-            }
-
-        document.addEventListener("DOMContentLoaded", function () {
+      // Tabs logic
+      function scrollToTabs() {
+        const tabsSection = document.querySelector('.tabs');
+        tabsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      document.addEventListener("DOMContentLoaded", function () {
         const tabLinks = document.querySelectorAll(".tab-link");
         const galleryTabs = document.querySelectorAll(".gallery-tab");
-
         tabLinks.forEach((tab) => {
-            tab.addEventListener("click", function () {
-                let barber = this.getAttribute("data-barber");
-
-                tabLinks.forEach((t) => t.classList.remove("active"));
-                galleryTabs.forEach((tab) => tab.classList.remove("active"));
-
-                document.getElementById(barber).classList.add("active");
-                this.classList.add("active");
-            });
+          tab.addEventListener("click", function () {
+            const barber = this.getAttribute("data-barber");
+            tabLinks.forEach((t) => t.classList.remove("active"));
+            galleryTabs.forEach((tab) => tab.classList.remove("active"));
+            document.getElementById(barber).classList.add("active");
+            this.classList.add("active");
+          });
         });
-    });
-
-
-        </script>
-    </body>
+      });
+    </script>
+  </body>
 </html>
